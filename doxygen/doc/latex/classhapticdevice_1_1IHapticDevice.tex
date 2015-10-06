@@ -1,0 +1,234 @@
+\section{hapticdevice\+:\+:I\+Haptic\+Device Class Reference}
+\label{classhapticdevice_1_1IHapticDevice}\index{hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}}
+
+
+A generic interface for an haptic device.  
+
+
+
+
+{\ttfamily \#include $<$I\+Haptic\+Device.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classhapticdevice_1_1IHapticDevice_a8c0b1835a1d7d501d1d4fa2efbd5ea26}{get\+Position} (yarp\+::sig\+::\+Vector \&pos)=0
+\begin{DoxyCompactList}\small\item\em Get the instantaneous position. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classhapticdevice_1_1IHapticDevice_a82f18c163da8ca50e564a29cf6b6f06e}{get\+Orientation} (yarp\+::sig\+::\+Vector \&rpy)=0
+\begin{DoxyCompactList}\small\item\em Get the instantaneous orientation. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classhapticdevice_1_1IHapticDevice_a83540a2fec263cb87628e9f521e89724}{get\+Buttons} (yarp\+::sig\+::\+Vector \&buttons)=0
+\begin{DoxyCompactList}\small\item\em Get the status of the available buttons. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classhapticdevice_1_1IHapticDevice_a1a6cbd5d7db5e36dbcd686b94a6b67ab}{is\+Cartesian\+Force\+Mode\+Enabled} (bool \&ret)=0
+\begin{DoxyCompactList}\small\item\em Query which feedback mode is active. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classhapticdevice_1_1IHapticDevice_a8b986f4c5d7bec42524c590c958ce37d}{set\+Cartesian\+Force\+Mode} ()=0
+\begin{DoxyCompactList}\small\item\em Enable Cartesian force feedback mode. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classhapticdevice_1_1IHapticDevice_a1246d82f600bcf16118b0be5f4a7087e}{set\+Joint\+Torque\+Mode} ()=0
+\begin{DoxyCompactList}\small\item\em Enable joint torque feedback mode. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classhapticdevice_1_1IHapticDevice_a976cc05cb22404a017f877837c82fc8e}{get\+Max\+Feedback} (yarp\+::sig\+::\+Vector \&max)=0
+\begin{DoxyCompactList}\small\item\em Get maximum values for the feedback. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classhapticdevice_1_1IHapticDevice_a77685dcf029136b739ae54ed8045e220}{set\+Feedback} (const yarp\+::sig\+::\+Vector \&fdbck)=0
+\begin{DoxyCompactList}\small\item\em Set the values for the force/torque feedback. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classhapticdevice_1_1IHapticDevice_a65fccacec1cfa0208c8952f7063a7b6b}{stop\+Feedback} ()=0
+\begin{DoxyCompactList}\small\item\em Disable force/torque feedback. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classhapticdevice_1_1IHapticDevice_aef306f97632c1ddb0eb39383000616f4}{set\+Transformation} (const yarp\+::sig\+::\+Matrix \&T)=0
+\begin{DoxyCompactList}\small\item\em Set the transformation matrix to be applied to position and force feedback data. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classhapticdevice_1_1IHapticDevice_a9bbb65a62a31e0f52f21c2eb13671483}{get\+Transformation} (yarp\+::sig\+::\+Matrix \&T)=0
+\begin{DoxyCompactList}\small\item\em Get the current transformation matrix used to modify the position readings and force feedback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A generic interface for an haptic device. 
+
+Definition at line 20 of file I\+Haptic\+Device.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\label{classhapticdevice_1_1IHapticDevice_a83540a2fec263cb87628e9f521e89724} 
+\index{hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}!get\+Buttons@{get\+Buttons}}
+\index{get\+Buttons@{get\+Buttons}!hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}}
+\subsubsection{\texorpdfstring{get\+Buttons()}{getButtons()}}
+{\footnotesize\ttfamily virtual bool hapticdevice\+::\+I\+Haptic\+Device\+::get\+Buttons (\begin{DoxyParamCaption}\item[{yarp\+::sig\+::\+Vector \&}]{buttons }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the status of the available buttons. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buttons} & vector containing the status of each available button expressed as a double in \mbox{[}0,1\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false on success/failure. 
+\end{DoxyReturn}
+\label{classhapticdevice_1_1IHapticDevice_a976cc05cb22404a017f877837c82fc8e} 
+\index{hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}!get\+Max\+Feedback@{get\+Max\+Feedback}}
+\index{get\+Max\+Feedback@{get\+Max\+Feedback}!hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}}
+\subsubsection{\texorpdfstring{get\+Max\+Feedback()}{getMaxFeedback()}}
+{\footnotesize\ttfamily virtual bool hapticdevice\+::\+I\+Haptic\+Device\+::get\+Max\+Feedback (\begin{DoxyParamCaption}\item[{yarp\+::sig\+::\+Vector \&}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get maximum values for the feedback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & vector containing the 3 maximum bounds of the feedback. Units are\+: \mbox{[}N\mbox{]} in Cartesian force mode, \mbox{[}m\+N$\ast$m\mbox{]} in joint torque mode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false on success/failure. 
+\end{DoxyReturn}
+\label{classhapticdevice_1_1IHapticDevice_a82f18c163da8ca50e564a29cf6b6f06e} 
+\index{hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}!get\+Orientation@{get\+Orientation}}
+\index{get\+Orientation@{get\+Orientation}!hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}}
+\subsubsection{\texorpdfstring{get\+Orientation()}{getOrientation()}}
+{\footnotesize\ttfamily virtual bool hapticdevice\+::\+I\+Haptic\+Device\+::get\+Orientation (\begin{DoxyParamCaption}\item[{yarp\+::sig\+::\+Vector \&}]{rpy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the instantaneous orientation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rpy} & vector containing the returned roll-\/pitch-\/yaw coordinates expressed in \mbox{[}deg\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false on success/failure. 
+\end{DoxyReturn}
+\label{classhapticdevice_1_1IHapticDevice_a8c0b1835a1d7d501d1d4fa2efbd5ea26} 
+\index{hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}}
+\subsubsection{\texorpdfstring{get\+Position()}{getPosition()}}
+{\footnotesize\ttfamily virtual bool hapticdevice\+::\+I\+Haptic\+Device\+::get\+Position (\begin{DoxyParamCaption}\item[{yarp\+::sig\+::\+Vector \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the instantaneous position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & vector containing the returned x-\/y-\/z coordinates expressed in \mbox{[}m\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false on success/failure. 
+\end{DoxyReturn}
+\label{classhapticdevice_1_1IHapticDevice_a9bbb65a62a31e0f52f21c2eb13671483} 
+\index{hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}!get\+Transformation@{get\+Transformation}}
+\index{get\+Transformation@{get\+Transformation}!hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}}
+\subsubsection{\texorpdfstring{get\+Transformation()}{getTransformation()}}
+{\footnotesize\ttfamily virtual bool hapticdevice\+::\+I\+Haptic\+Device\+::get\+Transformation (\begin{DoxyParamCaption}\item[{yarp\+::sig\+::\+Matrix \&}]{T }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the current transformation matrix used to modify the position readings and force feedback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & the returned 4-\/by-\/4 transformation matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false on success/failure. 
+\end{DoxyReturn}
+\label{classhapticdevice_1_1IHapticDevice_a1a6cbd5d7db5e36dbcd686b94a6b67ab} 
+\index{hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}!is\+Cartesian\+Force\+Mode\+Enabled@{is\+Cartesian\+Force\+Mode\+Enabled}}
+\index{is\+Cartesian\+Force\+Mode\+Enabled@{is\+Cartesian\+Force\+Mode\+Enabled}!hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}}
+\subsubsection{\texorpdfstring{is\+Cartesian\+Force\+Mode\+Enabled()}{isCartesianForceModeEnabled()}}
+{\footnotesize\ttfamily virtual bool hapticdevice\+::\+I\+Haptic\+Device\+::is\+Cartesian\+Force\+Mode\+Enabled (\begin{DoxyParamCaption}\item[{bool \&}]{ret }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Query which feedback mode is active. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ret} & true iff Cartesian force feedback is active, false iff joint torque feedback is active. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false on success/failure. 
+\end{DoxyReturn}
+\label{classhapticdevice_1_1IHapticDevice_a8b986f4c5d7bec42524c590c958ce37d} 
+\index{hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}!set\+Cartesian\+Force\+Mode@{set\+Cartesian\+Force\+Mode}}
+\index{set\+Cartesian\+Force\+Mode@{set\+Cartesian\+Force\+Mode}!hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}}
+\subsubsection{\texorpdfstring{set\+Cartesian\+Force\+Mode()}{setCartesianForceMode()}}
+{\footnotesize\ttfamily virtual bool hapticdevice\+::\+I\+Haptic\+Device\+::set\+Cartesian\+Force\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Enable Cartesian force feedback mode. 
+
+\begin{DoxyReturn}{Returns}
+true/false on success/failure. 
+\end{DoxyReturn}
+\label{classhapticdevice_1_1IHapticDevice_a77685dcf029136b739ae54ed8045e220} 
+\index{hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}!set\+Feedback@{set\+Feedback}}
+\index{set\+Feedback@{set\+Feedback}!hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}}
+\subsubsection{\texorpdfstring{set\+Feedback()}{setFeedback()}}
+{\footnotesize\ttfamily virtual bool hapticdevice\+::\+I\+Haptic\+Device\+::set\+Feedback (\begin{DoxyParamCaption}\item[{const yarp\+::sig\+::\+Vector \&}]{fdbck }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the values for the force/torque feedback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fdbck} & vector containing the 3 components of the feedback values. Units are\+: \mbox{[}N\mbox{]} in Cartesian force mode, \mbox{[}m\+N$\ast$m\mbox{]} in joint torque mode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false on success/failure. 
+\end{DoxyReturn}
+\label{classhapticdevice_1_1IHapticDevice_a1246d82f600bcf16118b0be5f4a7087e} 
+\index{hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}!set\+Joint\+Torque\+Mode@{set\+Joint\+Torque\+Mode}}
+\index{set\+Joint\+Torque\+Mode@{set\+Joint\+Torque\+Mode}!hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}}
+\subsubsection{\texorpdfstring{set\+Joint\+Torque\+Mode()}{setJointTorqueMode()}}
+{\footnotesize\ttfamily virtual bool hapticdevice\+::\+I\+Haptic\+Device\+::set\+Joint\+Torque\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Enable joint torque feedback mode. 
+
+\begin{DoxyReturn}{Returns}
+true/false on success/failure. 
+\end{DoxyReturn}
+\label{classhapticdevice_1_1IHapticDevice_aef306f97632c1ddb0eb39383000616f4} 
+\index{hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}!set\+Transformation@{set\+Transformation}}
+\index{set\+Transformation@{set\+Transformation}!hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}}
+\subsubsection{\texorpdfstring{set\+Transformation()}{setTransformation()}}
+{\footnotesize\ttfamily virtual bool hapticdevice\+::\+I\+Haptic\+Device\+::set\+Transformation (\begin{DoxyParamCaption}\item[{const yarp\+::sig\+::\+Matrix \&}]{T }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the transformation matrix to be applied to position and force feedback data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & the 4-\/by-\/4 transformation matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true/false on success/failure. 
+\end{DoxyReturn}
+\label{classhapticdevice_1_1IHapticDevice_a65fccacec1cfa0208c8952f7063a7b6b} 
+\index{hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}!stop\+Feedback@{stop\+Feedback}}
+\index{stop\+Feedback@{stop\+Feedback}!hapticdevice\+::\+I\+Haptic\+Device@{hapticdevice\+::\+I\+Haptic\+Device}}
+\subsubsection{\texorpdfstring{stop\+Feedback()}{stopFeedback()}}
+{\footnotesize\ttfamily virtual bool hapticdevice\+::\+I\+Haptic\+Device\+::stop\+Feedback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Disable force/torque feedback. 
+
+\begin{DoxyReturn}{Returns}
+true/false on success/failure. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/dev/haptic-\/devices/interface/I\+Haptic\+Device.\+h\end{DoxyCompactItemize}
